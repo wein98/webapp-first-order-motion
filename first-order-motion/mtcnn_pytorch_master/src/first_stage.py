@@ -3,7 +3,7 @@ from torch.autograd import Variable
 import math
 from PIL import Image
 import numpy as np
-from box_utils import nms, _preprocess
+from mtcnn_pytorch_master.src.box_utils import nms, _preprocess
 
 
 def run_first_stage(image, net, scale, threshold):

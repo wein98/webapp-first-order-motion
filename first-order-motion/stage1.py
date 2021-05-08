@@ -69,10 +69,10 @@ def cropVideo(videoPath, pathIn, pathOut):
   frame_array = []
 
   # face detect frame 1
-  left, top, right, bottom = crop_resize("frame0.jpg", "")
+  left, top, right, bottom = crop_resize("./frames/frame0.jpg", "")
 
   for i in range(count):
-      filename="frame{0}.jpg".format(i)
+      filename="./frames/frame{0}.jpg".format(i)
       #reading each files
       img = Image.open(filename)
       img = img.crop((left, top, right, bottom))
