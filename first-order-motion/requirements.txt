@@ -2,3 +2,8 @@ tensorflow==2.4.1
 cv2==4.1.2
 numpy==1.19.5
 PIL==7.1.2
+
+imageio==2.4.1
+matplotlib==3.2.2
+skimage==0.16.2
+IPython==5.5.0
