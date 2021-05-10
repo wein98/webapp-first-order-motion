@@ -94,5 +94,6 @@ def cropVideo(videoPath, pathIn):
 
 def cropImage(imagePath):
   left, top, right, bottom = crop_resize(imagePath, "")
+  img = Image.open(imagePath)
   img = img.crop((left, top, right, bottom))
   img.resize((256,256),Image.BICUBIC).save("stage1_image.jpg")
