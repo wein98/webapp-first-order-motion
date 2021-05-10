@@ -3,9 +3,10 @@ import imageio
 from first_order_model_master.demo import load_checkpoints
 from first_order_model_master.demo import make_animation
 from skimage import img_as_ubyte
+import warnings
 warnings.filterwarnings("ignore")
 
-generator, kp_detector = load_checkpoints(config_path='first_order_model/config/vox-256.yaml', 
+generator, kp_detector = load_checkpoints(config_path='first_order_model_master/config/vox-256.yaml', 
                             checkpoint_path='vox-cpk.pth.tar')
 
 def generate_output(image_path, video_path):
