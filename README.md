@@ -21,7 +21,7 @@ pip install -r requirements.txt
 ### 3. Run the following command:
 
 ```bash
-!python demo.py --src_img obama.jpg --src_vid musk.mp4
+python demo.py --src_img obama.jpg --src_vid musk.mp4
 ```
 
 ## Embedded GitHub Repositories
