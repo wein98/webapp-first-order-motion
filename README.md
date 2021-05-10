@@ -9,6 +9,8 @@ We prepared demo for the google-colab, see: ```webapp-first-order-motion.ipynb``
 
 This project supports ```python3```.
 
+cd to ```webapp-first-order-motion/first-order-motion```.
+
 ```bash
 pip install -r requirements.txt
 ```
