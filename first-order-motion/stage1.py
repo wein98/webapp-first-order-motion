@@ -42,7 +42,7 @@ def crop_resize(imgPath, resultFilename):
   bottom = box[0][3]
 
   img_res = img.crop((left, top, right, bottom)) 
-  img_res.show() 
+  # img_res.show() 
 
   # img_res.resize((256,256),Image.BICUBIC).save(resultFilename)
 
@@ -62,7 +62,7 @@ def convertVideotoFrames(videoPath):
   return count
 # convertVideotoFrames('singing_2.mp4')  # insert the video file path and name in the arg
 
-def cropVideo(videoPath, pathIn, pathOut):
+def cropVideo(videoPath, pathIn):
   count = convertVideotoFrames(videoPath)
 
   fps = count/12
@@ -83,7 +83,7 @@ def cropVideo(videoPath, pathIn, pathOut):
       #inserting the frames into an image array
       frame_array.append(img)
 
-  out = cv2.VideoWriter(pathOut,cv2.VideoWriter_fourcc(*'DIVX'), fps, (256,256))
+  out = cv2.VideoWriter("stage1_video.mp4",cv2.VideoWriter_fourcc(*'DIVX'), fps, (256,256))
 
   for i in range(len(frame_array)):
       # writing to a image array
@@ -91,3 +91,8 @@ def cropVideo(videoPath, pathIn, pathOut):
   out.release()
 
 # cropVideo('/', 'video.mp4')
+
+def cropImage(imagePath):
+  left, top, right, bottom = crop_resize(imagePath, "")
+  img = img.crop((left, top, right, bottom))
+  img.resize((256,256),Image.BICUBIC).save("stage1_image.jpg")

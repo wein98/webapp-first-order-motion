@@ -10,9 +10,9 @@ warnings.filterwarnings("ignore")
 generator, kp_detector = load_checkpoints(config_path='first_order_model_master/config/vox-256.yaml', 
                             checkpoint_path='vox-cpk.pth.tar')
 
-def generate_output(image_path, video_path):
-    source_image = imageio.imread(image_path)
-    reader = imageio.get_reader(video_path)
+def generate_output():
+    source_image = imageio.imread("stage1_image.jpg")
+    reader = imageio.get_reader("stage1_video.mp4")
 
     #Resize image and video to 256x256
 
