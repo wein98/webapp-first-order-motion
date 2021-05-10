@@ -3,6 +3,7 @@ import imageio
 from first_order_model_master.demo import load_checkpoints
 from first_order_model_master.demo import make_animation
 from skimage import img_as_ubyte
+from skimage.transform import resize
 import warnings
 warnings.filterwarnings("ignore")
 
