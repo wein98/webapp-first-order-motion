@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Main Page</title>
+    <style>
+        .box {
+            width: 100%;
+            float: left;
+            padding: 20px;
+        }
+
+        .half-box {
+            width: 30%;
+            height: 200px;
+            float: left;
+            padding: 20px;
+        }
+
+        .small-box {
+            width: 5%;
+            height: 200px;
+            float: left;
+            padding: auto;
+        }
+
+        .footer-box {
+            width: 33.33%;
+            height: 150px;
+            float: left;
+            padding: auto;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <header class="navbar navbar-dark navbar-expand-md bd-navbar bg-dark">
+        <nav class="container-xxl navbar navbar-dark bg-dark flex-wrap flex-md-nowrap">
+            <div class="container-fluid">
+                <a class="navbar-brand">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white"
+                        class="bi bi-camera-reels-fill" viewBox="0 0 21 21">
+                        <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path d="M9 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        <path
+                            d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7z" />
+                    </svg>
+                    <span class="navbar-brand mx-1 h1">Expressing Obama : A Facial Expression Transfer Engine</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <div class="box" id="introduction">
+            <br>
+            <h3 style="text-align: center;">Expressing Obama</h3>
+            <div class="text-center row row-cols-lg-12 justify-content-center">
+                <div class="col" style="max-width: 800px;">
+                    "Our team presents to you our Expressing Obama system, a combination of face detection, facial
+                    expression transfer technologies. Our system have
+                    compiled all the technologies and built this playground for you to play around with the system and
+                    even provide inputs of your own choice."</div>
+            </div>
+            <br>
+        </div>
+        <div class="container-xxl">
+            <div class="box" id="demo-playground" style="background-color: lightgray;">
+                <h5>Demo Playground</h5>
+                <div class="col">
+                    This section provides various examples which demonstrates our system's output
+                    based on the different combination of inputs selected.
+                </div>
+            </div>
+            <div class="box" id="demo-inputs">
+                <div>Select an image and a video clip from the dropdown list to see the output</div>
+                <div id="previewImg" class="half-box">
+                    <img id="image" alt="No picture found"
+                        style="margin-left: auto; margin-right: auto; display: block; object-fit: contain; width: 100%; height: 180px;"
+                        src="media/elon.jpg">
+                </div>
+                <div class="small-box">
+                    <svg style="display:block; margin:auto; margin-top: 92px;" xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                        <path
+                            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                        <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                    </svg>
+                </div>
+                <div class="half-box" id="previewVid">
+                    <video width="100%" height="180px" controls id="vidtag"
+                        style="object-fit: contain;margin-left: auto; margin-right: auto; display: block;">
+                        <source src="media/selena_sing.mp4" type="video/mp4" id="video">
+                    </video>
+                </div>
+                <div class="small-box">
+                    <svg style="display:block; margin:auto; margin-top: 92px;" xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4.5 5.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                    </svg>
+                </div>
+                <div class="half-box" id="previewOutput">
+                    <video width="100%" height="180px" controls id="outtag"
+                        style="object-fit: contain;margin-left: auto; margin-right: auto; display: block;">
+                        <source type="video/mp4" id="demo-output" src="">
+                    </video>
+                </div>
+                <div class="half-box">
+                    <select required name="demo-imgs" id="demo-imgs" class="form-select form-control-sm"
+                        style="width: 75%; height: fit-content; display: block; margin-left: auto; margin-right: auto;">
+                        <option value="elon">Elon Musk</option>
+                        <option value="obama">Barack Obama</option>
+                    </select>
+                </div>
+                <div class="small-box"></div>
+                <div class="half-box" style="display: block; margin-left: auto; margin-right: auto; ">
+                    <select required name="demo-vids" id="demo-vids" class="form-select form-control-sm"
+                        style="width: 75%; height: fit-content; display: block; margin-left: auto; margin-right: auto;">
+                        <option value="selena_sing">Selena Singing</option>
+                        <option value="elon_talk">Elon Talking</option>
+                    </select>
+                </div>
+                <div class="small-box"></div>
+                <div class="half-box">
+                    <button id="showOutput" type="button" class="mb-3 shadow-smbtn btn-secondary btn-sm"
+                        style="display: block; margin-left: auto; margin-right: auto;">Show Output</button>
+                </div>
+            </div>
+        </div>
+        <div class="container-xxl">
+            <div class="box" id="try-yourself-title" style="background-color: lightgray;">
+                <h5>Try it yourselves</h5>
+                <div class="col">
+                    This section enables you to select your choice of inputs and get your customised output via email.
+                </div>
+            </div>
+            <form method="POST" action="http://localhost:5000/upload_img" enctype="multipart/form-data" id="form">
+                <div class="box">
+                    <h5>Step 1 : Upload your choice of video</h5>
+                    <div class="input-group w-50 shadow-sm">
+                        <span class="input-group-text" id="basic-addon1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-film" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0v6h8V1H4zm8 8H4v6h8V9zM1 1v2h2V1H1zm2 3H1v2h2V4zM1 7v2h2V7H1zm2 3H1v2h2v-2zm-2 3v2h2v-2H1zM15 1h-2v2h2V1zm-2 3v2h2V4h-2zm2 3h-2v2h2V7zm-2 3v2h2v-2h-2zm2 3h-2v2h2v-2z" />
+                            </svg>
+                        </span>
+                        <input type="file" class="form-control" id="vidIn" accept=".mp4" name="video_file"
+                            placeholder="Choose you video">
+                    </div>
+                    <div id="videoPreview"></div>
+                </div>
+                <div class="box">
+                    <h5>Step 2 : Upload your choice of image</h5>
+                    <div class="input-group w-50 shadow-sm">
+                        <span class="input-group-text" id="basic-addon2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-file-image" viewBox="0 0 16 16">
+                                <path d="M8.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                <path
+                                    d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v8l-2.083-2.083a.5.5 0 0 0-.76.063L8 11 5.835 9.7a.5.5 0 0 0-.611.076L3 12V2z" />
+                            </svg>
+                        </span>
+                        <input type="file" class="form-control" id="imgIn" accept="image/*" name="image"
+                            placeholder="Choose you image">
+                    </div>
+                    <div id="imgPreview"></div>
+                </div>
+                <div class="box" id="output-section">
+                    <h5>Step 3 : Press Generate and wait patiently for your output</h5>
+                        <!-- <label for="email" class="form-label">Email address</label> -->
+                        <!-- <input type="email" class="form-control w-50" id="email" placeholder="name@example.com"
+                            required>
+                        <div class="invalid-feedback">
+                            Wrong email format, please try again
+                        </div> -->
+
+                        <!-- <br> -->
+                        <button id="generate" type="submit" class="mb-3 shadow-smbtn btn-secondary btn-sm"
+                            >Generate</button>
+                </div>
+            </form>
+            <div class="box" id="footer" style="background-color: lightgray;">
+                <div class="row">
+                    <h3 class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-person-square" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                            <path
+                                d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z" />
+                        </svg> About Project Team</h3>
+                    <p class="text-center">We are a team of 3 final year Computer Science student from Monash University
+                        Malaysia completing our Final Year Project :)</p>
+                </div>
+                <br>
+                <div class="row" style="margin-left: auto;margin-right: auto;">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-4" style="margin-top: auto;margin-bottom: auto;">
+                                <img src="media/img_avatar2.png" alt="WenYuan"
+                                    style="margin-left: auto; display: block;border-radius: 50%; object-fit: contain; width: 100px;">
+                            </div>
+                            <div class="col-md-8" style="margin-top: auto;margin-bottom: auto;">
+                                <strong>Chin Wen Yuan</strong>
+                                <p style="margin-bottom: 0%;">Project Manager</p>
+                                <p>wchi0020@student.monash.edu</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-4" style="margin-top: auto;margin-bottom: auto;">
+                                <img src="media/img_avatar2.png" alt="WeiYing"
+                                    style="margin-left: auto; display: block;border-radius: 50%; object-fit: contain; width: 100px;">
+                            </div>
+                            <div class="col-md-8" style="margin-top: auto;margin-bottom: auto;">
+                                <strong>Chia Wei Ying</strong>
+                                <p style="margin-bottom: 0%;">Lead Developer</p>
+                                <p>wchi0024@student.monash.edu</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-4" style="margin-top: auto;margin-bottom: auto;">
+                                <img src="media/img_avatar.png" alt="Samuel"
+                                    style="margin-left: auto; display: block;border-radius: 50%; object-fit: contain; width: 100px;">
+                            </div>
+                            <div class="col-md-8" style="margin-top: auto;margin-bottom: auto;">
+                                <strong>Samuel Chang Chew Leong</strong>
+                                <p style="margin-bottom: 0%;">Quality Assurance</p>
+                                <p>scha0091@student.monash.edu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    <h3 class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+                            <path
+                                d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z" />
+                        </svg> Special Thanks</h3>
+                    <p class="text-center">We want to express our gratitute to Dr Raphael Phan for helping us on this
+                        project.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <script>
+        // input parameter, source : filepath of video
+        function displayOutput(source) {
+            // remove spinner
+            removeSpinner();
+            // insert video section to display generated output
+            const displaySection = document.getElementById("output-section");
+            const outputDiv = document.createElement("div");
+            outputDiv.setAttribute("style","width: 100%; height: 200px; float: left;")
+            const videoTag = document.createElement("video");
+            videoTag.setAttribute("width","100%");
+            videoTag.setAttribute("height","180px");
+            videoTag.setAttribute("controls",true);
+            videoTag.setAttribute("id","gen-display");
+            videoTag.setAttribute("style","object-fit: contain;margin-left: auto; margin-right: auto; display: block;");
+            const videoSource = document.createElement("source");
+            videoSource.setAttribute("type","video/mp4");
+            videoSource.setAttribute("id","gen-display-source");
+            videoSource.setAttribute("src",source);
+            videoTag.appendChild(videoSource);
+            outputDiv.appendChild(videoTag);
+            displaySection.appendChild(outputDiv);
+        }
+
+        function removeSpinner() {
+            document.getElementById("generate").innerHTML = "";
+            document.getElementById("generate").innerText = "Generate";
+            document.getElementById("generate").disabled = true;
+        }
+
+        document.getElementById("demo-imgs").addEventListener('change', event => {
+            const selectedImg = document.getElementById("demo-imgs");
+            document.getElementById("image").src = "media/" + selectedImg.value + ".jpg";
+        })
+
+        document.getElementById("demo-vids").addEventListener('change', event => {
+            const selectedVid = document.getElementById("demo-vids");
+            document.getElementById("video").src = "media/" + selectedVid.value + ".mp4";
+            const vidTag = document.getElementById("vidtag");
+            vidTag.load();
+        })
+
+        document.getElementById("showOutput").addEventListener("click", event => {
+            const selectedImg = document.getElementById("demo-imgs");
+            const selectedVid = document.getElementById("demo-vids");
+            document.getElementById("demo-output").src = "media/selena_sing.mp4";
+            // document.getElementById("demo-output").src = "media/" + selectedImg.value + "_" + selectedVid.value + ".mp4";
+            const vidTag = document.getElementById("outtag");
+            vidTag.load();
+        })
+
+        document.getElementById("form").addEventListener("submit", event => {
+            // disable inputting new email
+            // const email = document.getElementById("email");
+            // email.readOnly = true;
+            // disable continue checking of email input
+            // stopEmailChecker();
+            const spinnerSpan = document.createElement("span");
+            spinnerSpan.setAttribute("class", "spinner-border spinner-border-sm");
+            spinnerSpan.setAttribute("role", "status");
+            document.getElementById("generate").innerText = "";
+            document.getElementById("generate").appendChild(spinnerSpan);
+
+        })
+
+        // const checkInput = setInterval(checkFormValid, 500);
+        // function checkEmailValid() {
+        //     if (document.getElementById("form").checkValidity()) {
+        //         //enable the generate button
+        //         const genButton = document.getElementById("generate");
+        //         genButton.disabled = false;
+        //     }
+        //     console.log("checking");
+        // }
+        // function stopEmailChecker() {
+        //     clearInterval(emailChecker);
+        // }
+    </script>
+</body>
+
+</html>

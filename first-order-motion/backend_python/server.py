@@ -56,11 +56,12 @@ def api_root():
 		# https://stackoverflow.com/questions/7974849/how-can-i-make-one-python-file-run-another
 
 		# start running the code file
-		run_from_server('uploads/'+vid_name, 'uploads/'+img_name)
+		run_from_server('backend_python/uploads/'+vid_name, 'backend_python/uploads/'+img_name)
 
-		return "Upload success. You will get the generated output automatically sent to this email: (" + request.form['userEmail'] + ") once it's done."
+		# TODO: respond the generated.mp4
+		return "Successfully generated."
 	else:
-		return "Where is the image?"
+		return "Incorrect input."
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=False)

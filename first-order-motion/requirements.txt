@@ -1,19 +1,25 @@
-tensorflow==2.4.1
+scipy
+tensorflow
+tqdm
 opencv-python
-numpy==1.19.5
+scikit-image
+scikit-learn
+pandas==0.23.4
+imageio-ffmpeg
 pillow==7.1.2
 
-imageio==2.4.1
+# this is manual pip install cmd for RTX3070 gpu
+# pip3 install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio===0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
+# source: https://pytorch.org/get-started/locally/
+
 matplotlib==3.2.2
 IPython==5.5.0
 
-pandas==0.23.4
+
 python-dateutil==2.7.3
 pytz==2018.5
 PyYAML==5.1
-scikit-image==0.14.0
-scikit-learn==0.19.2
-scipy==1.1.0
-torch==1.0.0
-torchvision==0.2.1
-tqdm==4.24.0
+
+
+
+
