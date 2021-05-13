@@ -1,0 +1,51 @@
+D:\Computer Science\Year3Sem2\FYP2\fyp2\backend_python
+D:\Computer Science\Year3Sem2\FYP2\fyp2\backend_python
+D:\Computer Science\Year3Sem2\FYP2\fyp2\backend_python/uploads/
+saving D:\Computer Science\Year3Sem2\FYP2\fyp2\backend_python/uploads/obama_res_1.jpg
+D:\Computer Science\Year3Sem2\FYP2\fyp2\backend_python
+Exception on /upload_img [POST]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\Computer Science\Year3Sem2\FYP2\fyp2\backend_python\server.py", line 25, in api_root
+    if request.method == 'POST' and request.files['image'] and requeste.files['video_file']:
+NameError: name 'requeste' is not defined
+D:\Computer Science\Year3Sem2\FYP2\fyp2\backend_python
+D:\Computer Science\Year3Sem2\FYP2\fyp2\backend_python/uploads/
+saving D:\Computer Science\Year3Sem2\FYP2\fyp2\backend_python/uploads/obama_res_1.jpg
+saving D:\Computer Science\Year3Sem2\FYP2\fyp2\backend_python/uploads/video_1.mp4
+D:\Computer Science\Year3Sem2\FYP2\fyp2\backend_python
+D:\Computer Science\Year3Sem2\FYP2\fyp2\backend_python/uploads/
+saving D:\Computer Science\Year3Sem2\FYP2\fyp2\backend_python/uploads/obama_res_1.jpg
+saving D:\Computer Science\Year3Sem2\FYP2\fyp2\backend_python/uploads/video_1.mp4
+Exception on /upload_img [POST]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1615, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1630, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1740, in make_response
+    rv = self.response_class.force_type(rv, request.environ)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers.py", line 885, in force_type
+    response = BaseResponse(*_run_wsgi_app(response, environ))
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers.py", line 57, in _run_wsgi_app
+    return _run_wsgi_app(*args)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\test.py", line 884, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: 'bool' object is not callable
+D:\Computer Science\Year3Sem2\FYP2\fyp2\backend_python
+D:\Computer Science\Year3Sem2\FYP2\fyp2\backend_python/uploads/
+saving D:\Computer Science\Year3Sem2\FYP2\fyp2\backend_python/uploads/obama_res_1.jpg
+saving D:\Computer Science\Year3Sem2\FYP2\fyp2\backend_python/uploads/video_1.mp4

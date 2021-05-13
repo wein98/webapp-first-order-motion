@@ -19,6 +19,18 @@ def main():
     # stage-2: image animating
     stage2.generate_output()
 
+def run_from_server(videoPath, imagePath):
+    pathIn= '/'
+    # pipeline for stage-1: input preprocessing
+    # 1. put to be input video and image to first-order-motion/
+    stage1.cropVideo(videoPath, pathIn)
+    stage1.cropImage(imagePath)
 
+    # stage-2: image animating
+    stage2.generate_output()
+
+def testing():
+    print("HAHAHAHAHA")
+    
 if __name__ == "__main__":
     main()

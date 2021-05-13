@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Upload images to server using Node JS</title>
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/jquery.form.min.js"></script>
+</head>
+
+<body>
+    <form method="POST" action="http://localhost:5000/upload_img" enctype="multipart/form-data">
+        <div>
+            <label>Select an image to upload:</label>
+            <input type="file" name="image"/>
+            <!-- <input type="file" name="image" accept=".png"/> accept specifies file type -->
+
+        </div>
+        <div>
+            <label>Select a video to upload:</label>
+            <input type="file" name="video_file" accept=".mp4"/>
+        </div>
+        <div>
+            <input type="submit" name="btn_upload_profile_pic" value="Upload" />
+        </div>
+    </form>
+</body>
+
+</html>
