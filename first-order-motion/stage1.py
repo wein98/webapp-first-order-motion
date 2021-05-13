@@ -58,8 +58,11 @@ def convertVideotoFrames(videoPath):
     cv2.imwrite("./frames/frame%d.jpg" % count, image)     # save frame as JPEG file      
     success,image = vidcap.read()
     count += 1
-
-  return count
+  
+  if count != 0:
+    return count
+  else:
+    raise Exception("The video is not found under /webapp-first-order-motion/first-order-motion/.")
 # convertVideotoFrames('singing_2.mp4')  # insert the video file path and name in the arg
 
 def cropVideo(videoPath, pathIn):
