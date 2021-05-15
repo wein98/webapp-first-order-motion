@@ -1,9 +1,4 @@
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.image import MIMEImage
-from email.mime.text import MIMEText
-
-from flask import Flask, url_for, send_from_directory, request
+from flask import Flask, request
 import logging, os
 from werkzeug import secure_filename
 
