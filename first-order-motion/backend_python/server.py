@@ -1,6 +1,7 @@
 from flask import Flask, request
 import logging, os
 from werkzeug import secure_filename
+from werkzeug.wrappers import Request, Response
 
 import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -54,7 +55,7 @@ def api_root():
 		run_from_server('backend_python/uploads/'+vid_name, 'backend_python/uploads/'+img_name)
 
 		# TODO: respond the generated.mp4
-		return "Successfully generated."
+		return Response()
 	else:
 		return "Incorrect input."
 
