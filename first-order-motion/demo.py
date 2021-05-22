@@ -31,14 +31,28 @@ def run_from_server(videoPath, imagePath):
     pathIn= '/'
     # pipeline for stage-1: input preprocessing
     # 1. put to be input video and image to first-order-motion/
-    stage1.cropVideo(videoPath, pathIn)
-    stage1.cropImage(imagePath)
+    res1 = stage1.cropVideo(videoPath, pathIn)
+    res2 = stage1.cropImage(imagePath)
 
-    print("Generating the output now.")
-    # stage-2: image animating
-    stage2.generate_output()
+    if (res1 and res2):
 
-    print("Output generated.")
+        print("Generating the output now.")
+        # stage-2: image animating
+        stage2.generate_output()
+
+        print("Output generated.")
+        return (0, "filename")
+    else:
+        if (not res1 and not res2):
+            # both image and video has no single face detected
+            return (3, "Both image and video have no single face detected")
+        elif (not res1):
+            # video has no single face detected
+            return (1, "Video has no single face detected")
+        elif (not res2):
+            # image has no single face detected
+            return (2, "Image has no single face detected")
+        
     
 if __name__ == "__main__":
     main()
