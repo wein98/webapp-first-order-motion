@@ -67,8 +67,8 @@ def convertVideotoFrames(videoPath):
 
 def cropVideo(videoPath, pathIn):
   count = convertVideotoFrames(videoPath)
-
-  fps = count/12
+  cap = cv2.VideoCapture(videoPath)
+  fps = cap.get(cv2.CAP_PROP_FPS)
   frame_array = []
 
   # face detect frame 1
