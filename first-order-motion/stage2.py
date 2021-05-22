@@ -7,9 +7,9 @@ from skimage.transform import resize
 import warnings
 warnings.filterwarnings("ignore")
 
-import os, sy
+import os
 mydir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-temp = kek + "//first-order-motion"
+temp = mydir + "//first-order-motion"
 mydir = os.chdir(temp)
 
 generator, kp_detector = load_checkpoints(config_path='first_order_model_master/config/vox-256.yaml', 
